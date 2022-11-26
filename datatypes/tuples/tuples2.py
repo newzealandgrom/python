@@ -1,0 +1,2 @@
+names = ('John', )
+print(names)
