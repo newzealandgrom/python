@@ -52,7 +52,7 @@ class HardDrive(tempMixin, DigitalMixing):
         if metric:
             temp = self._cel
         else:
-            temp = celf._c_to_f(self._cel)
+            temp = self.c_to_f(self._cel)
             
         space = self.mb_to_gb(self._space)
         print(f'space: {space}gb, temp: {temp}')
@@ -60,4 +60,6 @@ class HardDrive(tempMixin, DigitalMixing):
 
 hd = HardDrive(6008000, 22)
 hd.status()
+hd.status(metric=False)
+
 
